@@ -1,4 +1,4 @@
-  
+
 import discord
 from discord.ext import commands
 import random
@@ -40,19 +40,19 @@ class Music(commands.Cog):
     async def play(self, ctx, query):
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source, after=lambda e: print('Player error: %s' % e) if e else None)
-    
+
     @commands.command()
     async def curb(self, ctx):
         await self.play(ctx, 'sounds/curb.mp3')
-    
+
     @commands.command()
     async def doubt(self, ctx):
         await self.play(ctx, 'sounds/doubt.mp3')
-    
+
     @commands.command()
     async def drum(self, ctx):
         await self.play(ctx, 'sounds/drum.mp3')
- 
+
     @commands.command()
     async def error(self, ctx):
         await self.play(ctx, 'sounds/error.mp3')
@@ -104,6 +104,10 @@ class Music(commands.Cog):
     @commands.command()
     async def tagesschau(self, ctx):
         await self.play(ctx, 'sounds/tagesschau.mp3')
+
+    @commands.command()
+        async def tagesschauintro(self, ctx):
+            await self.play(ctx, 'sounds/tagesschauintro.mp3')
 
     @commands.command()
     async def thotdetected(self, ctx):
@@ -164,7 +168,7 @@ class Music(commands.Cog):
     commands.command()
     async def gzuz(self, ctx):
         gzuz_list = [
-        'sounds/gzuz/gzuz_brrrt.mp3', 
+        'sounds/gzuz/gzuz_brrrt.mp3',
         'sounds/gzuz/gzuz_drueckdrueck.mp3',
         'sounds/gzuz/gzuz_drueckedasgaspedal.mp3',
         'sounds/gzuz/gzuz_fuenfeuroweg.mp3',
@@ -172,7 +176,7 @@ class Music(commands.Cog):
         'sounds/gzuz/gzuz_hautfarbeovomaltine.mp3',
         'sounds/gzuz/gzuz_holmireinenrunter.mp3',
         'sounds/gzuz/gzuz_ichsaufmireinrein.mp3',
-        'sounds/gzuz/gzuz_keinekooperation.mp3', 
+        'sounds/gzuz/gzuz_keinekooperation.mp3',
         'sounds/gzuz/gzuz_krachindernacht.mp3',
         'sounds/gzuz/gzuz_krachindernachtohnevacht.mp3',
         'sounds/gzuz/gzuz_krankenwagen.mp3',
@@ -196,7 +200,7 @@ class Music(commands.Cog):
         output.save('temp.wav')
         await ctx.send(zitat)
         await self.play(ctx, 'temp.wav')
- 
+
 
 @bot.event
 async def on_ready():
