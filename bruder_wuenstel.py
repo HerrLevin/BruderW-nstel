@@ -70,8 +70,8 @@ class Music(commands.Cog):
         await self.play(ctx, 'sounds/kot.mp3')
 
     @commands.command()
-    async def whoop(self, ctx):
-        await self.play(ctx, 'sounds/whoopwhoop.mp3')
+    async def gzuz_whoop(self, ctx):
+        await self.play(ctx, 'sounds/gzuz/gzuz_whoopwhoop.mp3')
 
     @commands.command()
     async def tobias(self, ctx):
