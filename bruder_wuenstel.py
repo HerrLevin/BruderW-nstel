@@ -113,55 +113,55 @@ class Music(commands.Cog):
     async def tiefkuehlpommes(self, ctx):
         await self.play(ctx, 'sounds/tiefkuehlpommes.mp3')
 
-    commands.command()
+    @commands.command()
     async def aeugh(self, ctx):
         await self.play(ctx, 'sounds/aeugh.mp3')
 
-    commands.command()
+    @commands.command()
     async def ahfuck(self, ctx):
         await self.play(ctx, 'sounds/ahfuckicantbelieveyouvedonethis.mp3')
 
-    commands.command()
+    @commands.command()
     async def coronawarus(self, ctx):
         await self.play(ctx, 'sounds/coronawarus.mp3')
 
-    commands.command()
+    @commands.command()
     async def dannbinichdersohneinerhure(self, ctx):
         await self.play(ctx, 'sounds/dannbinichdersohneinerhure.mp3')
 
-    commands.command()
+    @commands.command()
     async def freiervogel(self, ctx):
         await self.play(ctx, 'sounds/freiervogel.mp3')
 
-    commands.command()
+    @commands.command()
     async def hska(self, ctx):
         await self.play(ctx, 'sounds/hska.mp3')
 
-    commands.command()
+    @commands.command()
     async def iamnotdrunk(self, ctx):
         await self.play(ctx, 'sounds/iamnotdrunk.mp3')
 
-    commands.command()
+    @commands.command()
     async def inmeinemchat(self, ctx):
         await self.play(ctx, 'sounds/inmeinemchat.mp3')
 
-    commands.command()
+    @commands.command()
     async def maddin(self, ctx):
         await self.play(ctx, 'sounds/jahalloescheee.mp3')
 
-    commands.command()
+    @commands.command()
     async def karsten(self, ctx):
         await self.play(ctx, 'sounds/karsten.mp3')
 
-    commands.command()
+    @commands.command()
     async def machdeinarschzu(self, ctx):
         await self.play(ctx, 'sounds/machdeinarschzu.mp3')
 
-    commands.command()
+    @commands.command()
     async def disappointment(self, ctx):
         await self.play(ctx, 'sounds/mydisappointmentisimmeasurable.mp3')
 
-    commands.command()
+    @commands.command()
     async def gzuz(self, ctx):
         gzuz_list = [
         'sounds/gzuz/gzuz_brrrt.mp3', 
