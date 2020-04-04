@@ -106,8 +106,8 @@ class Music(commands.Cog):
         await self.play(ctx, 'sounds/tagesschau.mp3')
 
     @commands.command()
-        async def tagesschauintro(self, ctx):
-            await self.play(ctx, 'sounds/tagesschauintro.mp3')
+    async def tagesschauintro(self, ctx):
+        await self.play(ctx, 'sounds/tagesschauintro.mp3')
             
     @commands.command()
     async def thotdetected(self, ctx):
