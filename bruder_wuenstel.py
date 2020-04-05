@@ -164,6 +164,18 @@ class Music(commands.Cog):
     @commands.command()
     async def disappointment(self, ctx):
         await self.play(ctx, 'sounds/mydisappointmentisimmeasurable.mp3')
+        
+    @commands.command()
+    async def luegenpresse(self, ctx):
+        await self.play(ctx, 'sounds/luegenpressehaltdiefresse.mp3')
+        
+    @commands.command()
+    async def youaintthatstraight(self, ctx):
+        await self.play(ctx, 'sounds/youaintthatstraight.mp3')
+        
+    @commands.command()
+    async def jaegermeister(self, ctx):
+        await self.play(ctx, 'sounds/jaegermeister.mp3')
 
     @commands.command()
     async def gzuz(self, ctx):
