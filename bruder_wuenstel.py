@@ -217,7 +217,54 @@ class Music(commands.Cog):
         'sounds/gzuz/gzuz_zehneuroweg.mp3',
         ]
         await self.play(ctx, random.choice(gzuz_list))
-
+    
+    @commands.command()
+    async def kotze(self, ctx):
+        gzuz_list = [
+        'sounds/kot.mp3',
+        'sounds/kotze_wuerg2.mp3',
+        'sounds/kotze_wuerg3.mp3',
+        'sounds/willsassokotze.mp3'
+        ]
+        await self.play(ctx, random.choice(gzuz_list))
+        
+    @commands.command()
+    async def knossi(self, ctx):
+        gzuz_list = [
+        'sounds/knossi/knossi_achttausendeuro.mp3',
+        'sounds/knossi/knossi_albinotürke.mp3',
+        'sounds/knossi/knossi_givemethemoney.mp3',
+        'sounds/knossi/knossi_knossisingtürkisch.mp3',
+        'sounds/knossi/knossi_nimmmimitdeuland.mp3',
+        'sounds/knossi/knossi_nr1schmetterling.mp3'
+        ]
+        await self.play(ctx, random.choice(gzuz_list))
+        
+    @commands.command()
+    async def knossi_achttausendeuro(self, ctx):
+        await self.play(ctx, 'sounds/knossi/knossi_achttausendeuro.mp3')
+        
+    @commands.command()
+    async def knossi_albinotürke(self, ctx):
+        await self.play(ctx, 'sounds/knossi/knossi_albinotürke.mp3')
+        
+    @commands.command()
+    async def knossi_givemethemoney(self, ctx):
+        await self.play(ctx, 'sounds/knossi/knossi_givemethemoney.mp3')
+        
+    @commands.command()
+    async def knossi_knossisingtürkisch(self, ctx):
+        await self.play(ctx, 'sounds/knossi/knossi_knossisingtürkisch.mp3')
+        
+    @commands.command()
+    async def knossi_nimmmimitdeuland(self, ctx):
+        await self.play(ctx, 'sounds/knossi/knossi_nimmmimitdeuland.mp3')
+        
+    @commands.command()
+    async def knossi_nr1schmetterling(self, ctx):
+        await self.play(ctx, 'sounds/knossi/knossi_nr1schmetterling.mp3')
+    
+   
     @commands.command()
     async def zitat(self, ctx):
         zitat = random_zitat()
