@@ -5,6 +5,7 @@ import random
 from gtts import gTTS
 from dotenv import load_dotenv
 import os
+import requests
 
 load_dotenv()
 
@@ -21,6 +22,10 @@ def random_zitat():
     for num, aline in enumerate(afile, 2):
         if random.randrange(num): continue
         line = aline
+    return line
+
+def was_ist_heute():
+    line = requests.get('https://heute-ist.dev.k118.de/?raw').text
     return line
 
 class Music(commands.Cog):
@@ -221,6 +226,13 @@ class Music(commands.Cog):
         await ctx.send(zitat)
         await self.play(ctx, 'temp.wav')
 
+    @commands.command()
+    async def heute(self, ctx):
+        heu = was_ist_heute()
+        output = gTTS(heu, lang='de')
+        output.save('temp.wav')
+        await ctx.send(heu)
+        await self.play(ctx, 'temp.wav')
 
 @bot.event
 async def on_ready():
