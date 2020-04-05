@@ -38,8 +38,16 @@ class Music(commands.Cog):
 
     @classmethod
     async def play(self, ctx, query):
+        if ctx.voice_client is None:
+            await ctx.send("Der Bot ist nicht mit einem voicechannel verbunden, du Hurensohn.")
+            return
+        
+        if ctx.voice_client.is_playing:
+            ctx.voice_client.stop()
+        
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source, after=lambda e: print('Player error: %s' % e) if e else None)
+        
 
     @commands.command()
     async def curb(self, ctx):
