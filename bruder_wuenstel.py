@@ -25,7 +25,7 @@ def random_zitat():
     return line
 
 def was_ist_heute():
-    d = requests.get('https://heute-ist.dev.k118.de/?raw').text
+    line = requests.get('https://heute-ist.dev.k118.de/?raw').text
     return line
 
 class Music(commands.Cog):
