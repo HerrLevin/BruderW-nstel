@@ -1,21 +1,17 @@
-
-import discord
-#from discord.ext.commands import CommandNotFound
-import re
-from discord.ext import commands
-from discord.ext.commands import CommandNotFound
-import random
-from gtts import gTTS
-from dotenv import load_dotenv
-from os import getenv, listdir
 import os
-from os.path import isfile, join
+import re
+import random
+import discord
 import requests
+from discord.ext.commands import CommandNotFound
+from discord.ext import commands
+from os.path import isfile, join
+from os import getenv, listdir
+from dotenv import load_dotenv
+from gtts import gTTS
 
 load_dotenv()
-
 bot_key = os.getenv("KEY")
-
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
 There are a number of utility commands being showcased here.'''
